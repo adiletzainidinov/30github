@@ -2,9 +2,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '@mui/material';
-import MosqueIcon from '@mui/icons-material/Mosque';
 import { Container } from './headerStyle';
 import SideBar from './side-bar/SideBar';
+import CottageIcon from '@mui/icons-material/Cottage';
 
 const Header = () => {
   return (
@@ -28,13 +28,13 @@ const Header = () => {
             sx={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MosqueIcon sx={{ fontSize: 40, color: '#ffffff', mr: 1 }} />
+              <CottageIcon sx={{ fontSize: 40, color: '#ffffff', mr: 1 }} />
               <Typography
                 variant="h6"
                 component="div"
                 sx={{ fontWeight: 'bold', color: '#ffffff' }}
               >
-                Адыл каары
+                Кайрат
               </Typography>
             </Box>
             <SideBar />

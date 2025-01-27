@@ -5,7 +5,7 @@ import RightContackt from './RightContackt';
 const Contackts = () => {
   return (
     <>
-      <Container>
+      <Container id='scrollToContacts'>
         <StyledBox>
             <LeftContact />
             <RightContackt/>

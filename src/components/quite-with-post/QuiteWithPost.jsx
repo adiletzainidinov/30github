@@ -1,18 +1,27 @@
 import { Container, Typography } from '@mui/material';
 import Button from '../../shared/UI/button/Button';
 import { QuoteContainer, StyledBox } from './QuiteWithPostStyle';
+import { useSelector } from 'react-redux';
 
 const shareToTelegram = (message) => {
   const telegramUrl = `https://t.me/share/url?url=&text=${encodeURIComponent(
     message
   )}`;
-
   window.open(telegramUrl, '_blank');
 };
 
 const QuiteWithPost = () => {
-  const message = `Сообщается, что Аиша однажды спросила у пророка Мухаммада ﷺ: «О посланник Всевышнего, возложен ли на женщин джихад?», 
-        на что он ﷺ (да благословит его Аллах и приветствует) ответил: «Их джихад — совершение Хаджа и Умры».`;
+  const { languageStore } = useSelector((state) => state.umra);
+
+  // Сообщения на русском и кыргызском языках
+  const messageRu = `Сообщается, что Гульнары апа однажды рассказывала, как установка отопления в её доме значительно улучшила качество жизни. 
+        Теперь зимой её дом теплый и уютный, что стало настоящим благословением для всей семьи.`;
+
+  const messageKy = `Гульнары апа бир жолу үйүндөгү жылуулук орнотуу анын жашоосун канчалык жакшыртканы тууралуу айтып берген. 
+        Эми кышында анын үйү жылуу жана уюткулук, бул бүт үй-бүлө үчүн чын ыраазычылык болду.`;
+
+  // Выбираем сообщение в зависимости от языка
+  const message = languageStore ? messageKy : messageRu;
 
   return (
     <Container>
@@ -25,10 +34,10 @@ const QuiteWithPost = () => {
             color="#7ad5ab"
             style={{ marginBottom: 35 }}
           >
-            (Ибн Маджа)
+            {languageStore ? '(Гульнары апа)' : '(Гульнары апа)'}
           </Typography>
           <Button onClick={() => shareToTelegram(message)}>
-            Поделиться в Telegram
+            {languageStore ? 'Telegram’ге бөлүшүү' : 'Поделиться в Telegram'}
           </Button>
         </QuoteContainer>
       </StyledBox>

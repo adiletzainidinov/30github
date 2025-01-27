@@ -7,10 +7,14 @@ import {
   StyledBox,
   QuestionContent,
 } from './questionsStyle';
-import { QuestionsData } from '../../data/data';
+import { QuestionsDataRu,QuestionsDataKy } from '../../data/data';
+import { useSelector } from 'react-redux';
 
 const Questions = () => {
   const [visibleQuestionId, setVisibleQuestionId] = useState(null);
+  const { languageStore } = useSelector((state) => state.umra);
+
+  const lang = languageStore ? QuestionsDataKy : QuestionsDataRu;
 
   const handleIsVisible = (id) => {
     setVisibleQuestionId((prevId) => (prevId === id ? null : id));
@@ -20,8 +24,8 @@ const Questions = () => {
     <Container>
       <StyledBox>
         <BoxContainer>
-          <h2>Вопросы и ответы</h2>
-          {QuestionsData.map((item) => (
+          <h2>{languageStore ? 'Суроо жооп' : 'Вопросы и ответы'}</h2>
+          {lang.map((item) => (
             <div key={item.id}>
               <QuestionsBox onClick={() => handleIsVisible(item.id)}>
                 <div

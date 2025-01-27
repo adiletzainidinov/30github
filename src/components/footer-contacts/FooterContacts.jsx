@@ -8,41 +8,69 @@ import {
   StyledBox,
 } from './FooterContactsStyle';
 import TelegramIconSecond from '../../assets/images/telegramIconSecond.png';
+import { useSelector } from 'react-redux';
+import { handleSocialClick } from '../../utils/shared/gotuSoccial';
 
-const FooterContactsData = [
+const FooterContactsDataRu = [
   {
     id: 1,
-    number: '+ 996 999 99 99 99',
+    number: '+ 996 770 43 04 76',
     icon: 'logo-whatsapp',
     write: 'НАПИСАТЬ WHATSAPP',
+    url: 'https://wa.me/996770430476',
+
   },
   {
     id: 2,
-    number: '+ 996 999 99 99 99',
+    number: '+ 996 770 43 04 76',
     telegram: TelegramIconSecond,
     write: 'НАПИСАТЬ TELEGRAM',
+    url: 'https://t.me/+996770430476',
+
+  },
+];
+
+const FooterContactsDataKy = [
+  {
+    id: 1,
+    number: '+ 996 770 43 04 76',
+    icon: 'logo-whatsapp',
+    write: 'WHATSAPP жазуу',
+    url: 'https://wa.me/996770430476',
+  },
+  {
+    id: 2,
+    number: '+ 996 770 43 04 76',
+    telegram: TelegramIconSecond,
+    write: 'TELEGRAM жазуу',
+    url: 'https://t.me/+996770430476',
   },
 ];
 
 const FooterContacts = () => {
+  const { languageStore } = useSelector((state) => state.umra);
+
+  // Выбор данных в зависимости от языка
+  const lang = languageStore ? FooterContactsDataKy : FooterContactsDataRu;
+
   return (
-    <Container>
+    <Container id="footerContacts">
       <StyledBox>
         <BoxContainer>
-          <h2>Контакты</h2>
+          <h2>{languageStore ? 'Контакттар' : 'Контакты'}</h2>
           <PapaLeftRightFooter>
-            {FooterContactsData.map((item) => (
+            {lang.map((item) => (
               <LeftContactsFooter key={item.id}>
                 <FooterFlex>
-                  <p className='call-out'>
+                  <p className="call-out">
                     <span className="call">
                       <ion-icon name="call-outline"></ion-icon>
                     </span>
                     {item.number}
                   </p>
-                  <ButtonStyle>
+                  <ButtonStyle onClick={() => handleSocialClick(item.url)}>
                     <div className="or">
-                      <p>ИЛИ</p>
+                      <p>{languageStore ? 'ЖЕ' : 'ИЛИ'}</p>
                     </div>
                     {item.write}
                     <p className="whatsapp">

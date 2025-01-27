@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import LeftPrice from './LeftPrice';
 import {
   BlueBox,
@@ -13,24 +14,52 @@ import RightPrice from './RightPrice';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
-const BoxCardData = [
-  { id: 1, text: 'Partner1' },
-  { id: 2, text: 'Partner2' },
-  { id: 3, text: 'Partner3' },
-  { id: 4, text: 'Partner4' },
-  { id: 5, text: 'Partner5' },
-];
+const translations = {
+  ru: [
+    { id: 1, text: 'Партнер1' },
+    { id: 2, text: 'Партнер2' },
+    { id: 3, text: 'Партнер3' },
+    { id: 4, text: 'Партнер4' },
+    { id: 5, text: 'Партнер5' },
+  ],
+  ky: [
+    { id: 1, text: 'Өнөктөш1' },
+    { id: 2, text: 'Өнөктөш2' },
+    { id: 3, text: 'Өнөктөш3' },
+    { id: 4, text: 'Өнөктөш4' },
+    { id: 5, text: 'Өнөктөш5' },
+  ],
+};
 
 const animation = { duration: 15000, easing: (t) => t };
 
 const Price = () => {
+  const { languageStore } = useSelector((state) => state.umra);
+  const lang = languageStore ? translations.ky : translations.ru; // Выбор языка на основе true/false
+
+
+  // Мультиязычный текст
+  const textContent = languageStore
+    ? {
+        title: 'ЖЫЛУУЛУК СИСТЕМАЛАРЫНЫН БААЛАРЫ',
+        description:
+          'Баалар жылуулук системасынын түрүнө, колдонулган материалдарга жана орнотуу шарттарына жараша өзгөрөт. Толук маалымат алуу үчүн биз менен байланышыңыз.',
+        partnersTitle: 'БИЗДИН ӨНӨКТӨШТӨР',
+      }
+    : {
+        title: 'ЦЕНЫ НА СИСТЕМЫ ОТОПЛЕНИЯ',
+        description:
+          'Цены зависят от типа системы отопления, используемых материалов и условий монтажа. Для получения полной информации свяжитесь с нами.',
+        partnersTitle: 'НАШИ ПАРТНЕРЫ',
+      };
+
   const [sliderRef] = useKeenSlider({
     loop: true,
     renderMode: 'performance',
     drag: false,
     slides: {
-      perView: window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 3 : 5, 
-      spacing: 40, 
+      perView: window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 3 : 5,
+      spacing: 40,
     },
     created(s) {
       s.moveToIdx(5, true, animation);
@@ -44,16 +73,12 @@ const Price = () => {
   });
 
   return (
-    <Container>
+    <Container id="priceSection">
       <StyledBox>
         <BoxContainer>
           <TextContent>
-            <h2>УМРА БААСЫ БИШКЕК</h2>
-            <p>
-              Баасына Бишкек-Джидда-Мадина-Мекке-Бишкек каттамы кирет. Ошондой
-              эле Стамбул жана Дубай аркылуу варианттар бар. Учурдагы бааларды
-              тактоо үчүн бизге кайрылыңыз.
-            </p>
+            <h2>{textContent.title}</h2>
+            <p>{textContent.description}</p>
           </TextContent>
           <ContainerContent>
             <LeftPrice />
@@ -62,10 +87,10 @@ const Price = () => {
         </BoxContainer>
 
         <BlueBox>
-          <h2>НАШИ ПАРТНЕРЫ</h2>
+          <h2>{textContent.partnersTitle}</h2>
           <PartnerBox ref={sliderRef} className="keen-slider">
-            {BoxCardData.map((item) => (
-              <div className="boxCard keen-slider__slide " key={item.id}>
+            {lang.map((item) => (
+              <div className="boxCard keen-slider__slide" key={item.id}>
                 {item.text}
               </div>
             ))}

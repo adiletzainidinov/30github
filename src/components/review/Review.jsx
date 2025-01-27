@@ -11,67 +11,57 @@ import {
   ReviewPapa,
   ButtonStyle,
 } from './ReviewStyle';
+import { useSelector } from 'react-redux';
 
-const ReviewData = [
+const ReviewDataRu = [
   {
     id: 1,
-    name: 'Бахтияр Каратай-Оглу Самедов',
+    name: 'Иван Иванов',
     img: 'https://i.pinimg.com/564x/37/d1/91/37d191df740d6260664ad945ab2d88da.jpg',
-    raiting: '10/10',
-    review: `АССАЛМУ АЛЕЙКУМ ДОРОГИЕ БРАТЬЯ И СЁСТРЫ! ПОЗДРАВЛЯЮ ВСЕХ ПАЛОМНИКОВ "UMMA TUR" 2024 ГОДА С СОВЕРШЕНИЕМ ХАДЖА! Пусть Аллах примет ваши молитвы и сделает этот Хадж причиной вашего прощения! Да благословит вас Всевышний!`,
-    date: '5 августа 2024',
+    rating: '10/10',
+    review: `Отличная компания! Установили отопление в частном доме быстро и качественно. Работы были выполнены точно в срок, и теперь зимой в доме тепло и уютно!`,
+    date: '5 января 2025',
     BackgroundColor: '#f3ffc6',
   },
   {
     id: 2,
-    name: 'Гюзель Гатина',
+    name: 'Елена Сидорова',
     img: 'https://i.pinimg.com/564x/67/d2/93/67d293abfd027d227b8f8dc5e4bcb56b.jpg',
-    raiting: '9/10',
-    review: `Ас-саляму алейкум!!! По воле Всевышнего Аллаha, Альхамдулилляh, совершила хадж, пусть Аллаh примет его. Но, здесь хочу остановиться про UMMA TOUR, моя`,
-    date: '10 августа 2024',
+    rating: '9/10',
+    review: `Очень довольна работой этой компании. Все сделали аккуратно, а отопление работает отлично. Были небольшие задержки по времени, но все решилось быстро.`,
+    date: '15 января 2025',
     BackgroundColor: '#fac8cd',
   },
-  // {
-  //   id: 3,
-  //   name: 'Гюзель Гатина',
-  //   img: 'https://i.pinimg.com/564x/37/d1/91/37d191df740d6260664ad945ab2d88da.jpg',
-  //   raiting: '10/10',
-  //   review: `Ассалям алейкум! В этом году мы с супругом совершили свой первый Хадж. Самую главную поездку нашей жизни мы доверили Умма Тур и не ошиблись. Выбирали из`,
-  //   date: '5 августа 2024',
-  //   BackgroundColor: '#9cffd9',
-  // },
-  // {
-  //   id: 4,
-  //   name: 'Гюзель Гатина',
-  //   img: 'https://i.pinimg.com/564x/67/d2/93/67d293abfd027d227b8f8dc5e4bcb56b.jpg',
-  //   raiting: '9/10',
-  //   review: `Умма тур - это лучшее что есть на российском рынке. Есть с чем сравнить(3-й хадж и все поездки с разными операторами) Не пожалел ни на минуту! Всем`,
-  //   date: '10 августа 2024',
-  //   BackgroundColor: '#68c5db',
-  // },
-  // {
-  //   id: 5,
-  //   name: 'Гюзель Гатина',
-  //   img: 'https://i.pinimg.com/564x/37/d1/91/37d191df740d6260664ad945ab2d88da.jpg',
-  //   raiting: '10/10',
-  //   review: `Ассаляму алейкум. Хочу оставить свой отзыв, ведь многие также как я выбирают и сравнивают цены, условия, надежность компании. Умматур сделала абсолютно...`,
-  //   date: '5 августа 2024',
-  //   BackgroundColor: '#b9caff',
-  // },
-  // {
-  //   id: 6,
-  //   name: 'Гюзель Гатина',
-  //   img: 'https://i.pinimg.com/564x/67/d2/93/67d293abfd027d227b8f8dc5e4bcb56b.jpg',
-  //   raiting: '9/10',
-  //   review: `Ассаламу алейкум. Хвала Всевышнему выбрала вас после истихара намаза. Хочу поблагодарить вашу турфирму за прекрасно проведенный Хадж. Благодарю за...`,
-  //   date: '10 августа 2024',
-  //   BackgroundColor: '#d7ffab',
-  // },
 ];
+
+const ReviewDataKy = [
+  {
+    id: 1,
+    name: 'Иван Иванов',
+    img: 'https://i.pinimg.com/564x/37/d1/91/37d191df740d6260664ad945ab2d88da.jpg',
+    rating: '10/10',
+    review: `Жакшы компания! Жеке үйгө жылуулук орнотушту тез жана сапаттуу жасады. Жумуштар так убагында аткарылды, эми кышында үйдө жылуулук жана уюткулук бар!`,
+    date: '5 январь 2025',
+    BackgroundColor: '#f3ffc6',
+  },
+  {
+    id: 2,
+    name: 'Елена Сидорова',
+    img: 'https://i.pinimg.com/564x/67/d2/93/67d293abfd027d227b8f8dc5e4bcb56b.jpg',
+    rating: '9/10',
+    review: `Бул компаниянын иши менен абдан канааттандым. Бардык иштер так жана жакшы аткарылды, жылуулук жакшы иштейт. Азыр кээ бир кечигүүлөр болгон, бирок бардыгы тез чечилди.`,
+    date: '15 январь 2025',
+    BackgroundColor: '#fac8cd',
+  },
+];
+
 
 const Review = () => {
   const [expandedReviews, setExpandedReviews] = useState({});
   const maxTextLength = 120;
+  const { languageStore } = useSelector((state) => state.umra);
+
+  const lang = languageStore ? ReviewDataKy : ReviewDataRu
 
   const handleToggleExpand = (id) => {
     setExpandedReviews((prevState) => ({
@@ -84,10 +74,12 @@ const Review = () => {
     <Container>
       <StyledBox>
         <BoxContainer>
-          <ReviewsFromЗilgrims>Отзывы наших паломников</ReviewsFromЗilgrims>
+          <ReviewsFromЗilgrims>
+            {languageStore ? 'Кардарлардын пикирлери' : 'Отзывы наших клиентов'}
+          </ReviewsFromЗilgrims>
 
           <ReviewPapa>
-            {ReviewData.map((review) => {
+            {lang.map((review) => {
               const isExpanded = expandedReviews[review.id];
               const displayedText = isExpanded
                 ? review.review
@@ -103,7 +95,7 @@ const Review = () => {
                   <AboutNameReviev>
                     <img src={review.img} alt="Отзыв паломника" />
                     <p>{review.name}</p>
-                    <div className="raiting">{review.raiting}</div>
+                    <div className="raiting">{review.rating}</div>
                   </AboutNameReviev>
 
                   <RealReviev>
@@ -120,7 +112,9 @@ const Review = () => {
               );
             })}
           </ReviewPapa>
-          <ButtonStyle>Все отзывы</ButtonStyle>
+          <ButtonStyle>
+            {languageStore ? 'Бардык пикирлер' : 'Все отзывы'}
+          </ButtonStyle>
         </BoxContainer>
       </StyledBox>
     </Container>

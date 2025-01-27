@@ -5,7 +5,7 @@ import RightHome from './RightHome';
 const Home = () => {
   return (
     <>
-      <Container>
+      <Container id='home'>
         <StyledBox>
           <BoxContainer>
             <LeftHome />

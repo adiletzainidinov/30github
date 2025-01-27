@@ -2,8 +2,44 @@ import { Box, Typography, Link, Container, Grid } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { ContainerFooter, StyledBox } from './footerStyle';
 import { Telegram, WhatsApp, YouTube } from '@mui/icons-material';
+import { useSelector } from 'react-redux';
+import { handleSocialClick } from '../../utils/shared/gotuSoccial';
+import { scrollToElement } from '../../utils/shared/scrollUtils';
 
 const Footer = () => {
+  const { languageStore } = useSelector((state) => state.umra); // Получаем язык из состояния
+  const scrollToHome = () => scrollToElement('home');
+  const scrollToPrice = () => scrollToElement('priceSection');
+  const scrollToContacts = () => scrollToElement('scrollToContacts');
+
+
+  const footerData = {
+    ru: {
+      companyTitle: 'О компании',
+      companyDescription:
+        'Мы предоставляем лучшие решения для отопления, обеспечивая комфорт и тепло в вашем доме.',
+      usefulLinksTitle: 'Полезные ссылки',
+      home: 'Главная',
+      aboutUs: 'Цены',
+      contacts: 'Контакты',
+      followUsTitle: 'Следите за нами',
+      copyright: 'Сайт создал Адилет',
+    },
+    ky: {
+      companyTitle: 'Компания жөнүндө',
+      companyDescription:
+        'Биз үйдө жылуулукту камсыз кылуу үчүн эң жакшы чечимдерди сунуштайбыз, үйүңүздө ыңгайлуу жана жылуу болууга жардам беребиз.',
+      usefulLinksTitle: 'Керектуу ссылкалар',
+      home: 'Башкы бет',
+      aboutUs: 'Цены',
+      contacts: 'Байланыштар',
+      followUsTitle: 'Бизди көзөмөлдөп туруңуз',
+      copyright: 'Сайтты түзгөн Адилет',
+    },
+  };
+
+  const lang = languageStore ? footerData.ky : footerData.ru; // Переключаем данные в зависимости от языка
+
   return (
     <ContainerFooter>
       <StyledBox>
@@ -22,46 +58,45 @@ const Footer = () => {
             <Grid container spacing={4} justifyContent="space-between">
               <Grid item xs={12} md={6}>
                 <Typography variant="h6" gutterBottom>
-                  О компании
+                  {lang.companyTitle}
                 </Typography>
                 <Typography variant="body2" color="white">
-                  Мы предоставляем лучшие услуги для организации умры, помогая
-                  паломникам сделать их путешествие незабываемым.
+                  {lang.companyDescription}
                 </Typography>
               </Grid>
 
               <Grid item xs={12} md={3}>
                 <Typography variant="h6" gutterBottom>
-                  Полезные ссылки
+                  {lang.usefulLinksTitle}
                 </Typography>
-                <Link href="#" color="inherit" variant="body2">
-                  Главная
+                <Link style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToHome}>
+                  {lang.home}
                 </Link>
                 <br />
-                <Link href="#" color="inherit" variant="body2">
-                  О нас
+                <Link  style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToPrice}>
+                  {lang.aboutUs}
                 </Link>
                 <br />
-                <Link href="#" color="inherit" variant="body2">
-                  Контакты
+                <Link style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToContacts}>
+                  {lang.contacts}
                 </Link>
               </Grid>
 
               <Grid item xs={12} md={3}>
                 <Typography variant="h6" gutterBottom>
-                  Следите за нами
+                  {lang.followUsTitle}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                  <Link href="#" color="inherit">
+                  <Link  color="inherit">
                     <YouTube />
                   </Link>
-                  <Link href="#" color="inherit">
+                  <Link onClick={() => handleSocialClick('https://wa.me/996770430476')} color="inherit">
                     <WhatsApp />
                   </Link>
-                  <Link href="#" color="inherit">
+                  <Link onClick={() => handleSocialClick('https://www.instagram.com/kairatows/?utm_source=ig_web_button_share_sheet')} color="inherit">
                     <InstagramIcon />
                   </Link>
-                  <Link href="#" color="inherit">
+                  <Link onClick={() => handleSocialClick('https://t.me/+996770430476')} color="inherit">
                     <Telegram />
                   </Link>
                 </Box>
@@ -69,10 +104,10 @@ const Footer = () => {
             </Grid>
 
             <Box mt={4} textAlign="center">
-              <Typography variant="body2" color="white">
-                &copy; {new Date().getFullYear()} Сайт создал Адилет{' '}
-                <Link href="https://t.me/Makka567" color="inherit">
-                  <Telegram sx={{ position: 'relative', top: 7}} />
+              <Typography style={{cursor: 'pointer'}} variant="body2" color="white" onClick={() => handleSocialClick('https://t.me/Makka567')}>
+                &copy; {new Date().getFullYear()} {lang.copyright}{' '}
+                <Link  color="inherit">
+                  <Telegram sx={{ position: 'relative', top: 7 }} />
                 </Link>
               </Typography>
             </Box>

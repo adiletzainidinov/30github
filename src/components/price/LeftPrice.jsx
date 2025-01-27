@@ -1,35 +1,66 @@
 import { Box } from '@mui/material';
 import { ContainerLeftBox, LinePrice, TextIcon } from './PriceStyle';
+import { useSelector } from 'react-redux';
 
 const DataTextIcon = [
-  { id: 1, icon: 'accessibility', text: 'Встреча/посадка в аэропорту' },
-  { id: 2, icon: 'book', text: 'Детальное обучение к Умре' },
-  { id: 3, icon: 'locate', text: 'Экскурсии по священным местам' },
-  { id: 4, icon: 'thumbs-up', text: 'Помощь в совершении священных обрядов' },
-  { id: 5, icon: 'volume-high', text: 'Ежедневные проповеди для паломников' },
-  { id: 6, icon: 'shield', text: 'Контроль безопасности паломника' },
-  { id: 7, icon: 'document', text: 'Покупка местной SIM-карты' },
-  { id: 8, icon: 'cash', text: 'Помощь в обмене валюты' },
-  { id: 9, icon: 'gift', text: 'Помощь в выборе подарков родным' },
-  { id: 10, icon: 'heart-circle', text: 'Любая посильная помощь паломнику' },
+  { id: 1, icon: 'hammer', textKey: 'installation' },
+  { id: 2, icon: 'information-circle', textKey: 'consultation' },
+  { id: 3, icon: 'construct', textKey: 'design' },
+  { id: 4, icon: 'build', textKey: 'service' },
+  { id: 5, icon: 'flame', textKey: 'energy_saving' },
+  { id: 6, icon: 'shield-checkmark', textKey: 'security' },
+  { id: 7, icon: 'document-text', textKey: 'documents' },
+  { id: 8, icon: 'wallet', textKey: 'budget' },
+  { id: 9, icon: 'gift', textKey: 'seasonal_offers' },
+  { id: 10, icon: 'help-circle', textKey: 'support' },
 ];
 
 const LeftPrice = () => {
+  const { languageStore } = useSelector((state) => state.umra);
+
+  // Мультиязычные данные
+  const textContent = languageStore
+    ? {
+        header: 'Толук коштоп берүү:',
+        installation: 'Жабдууларды орнотуу боюнча кесипкөй кызмат көрсөтүү',
+        consultation: 'Жылуулук системасын тандоо боюнча кеңеш берүү',
+        design: 'Жылуулук системаларын долбоорлоо',
+        service: 'Кызмат көрсөтүү жана оңдоо',
+        energy_saving: 'Энергияны үнөмдөө боюнча сунуштар',
+        security: 'Жабдуулардын коопсуздугуна кепилдик',
+        documents: 'Документтерди толтуруу боюнча жардам',
+        budget: 'Бюджетке ылайыктуу чечимдер',
+        seasonal_offers: 'Жаздык сунуштар жана бонустар',
+        support: 'Бардык этаптар боюнча жардам',
+      }
+    : {
+        header: 'Полное сопровождение:',
+        installation: 'Профессиональная установка оборудования',
+        consultation: 'Консультации по выбору отопительной системы',
+        design: 'Проектирование отопительных систем',
+        service: 'Обслуживание и ремонт оборудования',
+        energy_saving: 'Рекомендации по экономии энергоресурсов',
+        security: 'Гарантия безопасности системы отопления',
+        documents: 'Помощь с документами для подключения',
+        budget: 'Подбор оптимальных решений для бюджета',
+        seasonal_offers: 'Сезонные акции и бонусы',
+        support: 'Поддержка на всех этапах установки',
+      };
+
   return (
     <>
       <ContainerLeftBox>
-        <h2>Полное сопровождение:</h2>
-
+        <h2>{textContent.header}</h2> {/* Динамический заголовок */}
         {DataTextIcon.map((item) => (
-          <>
-            <TextIcon key={item.id}>
+          <div key={item.id}>
+            <TextIcon>
               <Box>
                 <ion-icon name={item.icon}></ion-icon>
               </Box>
-              <p>{item.text}</p>
+              <p>{textContent[item.textKey]}</p>
             </TextIcon>
             <LinePrice />
-          </>
+          </div>
         ))}
       </ContainerLeftBox>
     </>
