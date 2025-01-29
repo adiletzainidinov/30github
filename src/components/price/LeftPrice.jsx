@@ -3,67 +3,65 @@ import { ContainerLeftBox, LinePrice, TextIcon } from './PriceStyle';
 import { useSelector } from 'react-redux';
 
 const DataTextIcon = [
-  { id: 1, icon: 'hammer', textKey: 'installation' },
-  { id: 2, icon: 'information-circle', textKey: 'consultation' },
-  { id: 3, icon: 'construct', textKey: 'design' },
-  { id: 4, icon: 'build', textKey: 'service' },
-  { id: 5, icon: 'flame', textKey: 'energy_saving' },
-  { id: 6, icon: 'shield-checkmark', textKey: 'security' },
-  { id: 7, icon: 'document-text', textKey: 'documents' },
-  { id: 8, icon: 'wallet', textKey: 'budget' },
-  { id: 9, icon: 'gift', textKey: 'seasonal_offers' },
-  { id: 10, icon: 'help-circle', textKey: 'support' },
+  { id: 1, icon: 'play-circle', textKey: 'safe_content' },
+  { id: 2, icon: 'shield-checkmark', textKey: 'halal_control' },
+  { id: 3, icon: 'happy', textKey: 'child_friendly' },
+  { id: 4, icon: 'book', textKey: 'educational' },
+  { id: 5, icon: 'time', textKey: 'time_control' },
+  { id: 6, icon: 'chatbubbles', textKey: 'parent_community' },
+  { id: 7, icon: 'gift', textKey: 'free_access' },
+  { id: 8, icon: 'globe', textKey: 'multilingual' },
+  { id: 9, icon: 'people', textKey: 'family_friendly' },
+  { id: 10, icon: 'heart', textKey: 'support_us' },
 ];
 
 const LeftPrice = () => {
   const { languageStore } = useSelector((state) => state.umra);
 
-  // Мультиязычные данные
+  // Мультиязычный контент
   const textContent = languageStore
     ? {
-        header: 'Толук коштоп берүү:',
-        installation: 'Жабдууларды орнотуу боюнча кесипкөй кызмат көрсөтүү',
-        consultation: 'Жылуулук системасын тандоо боюнча кеңеш берүү',
-        design: 'Жылуулук системаларын долбоорлоо',
-        service: 'Кызмат көрсөтүү жана оңдоо',
-        energy_saving: 'Энергияны үнөмдөө боюнча сунуштар',
-        security: 'Жабдуулардын коопсуздугуна кепилдик',
-        documents: 'Документтерди толтуруу боюнча жардам',
-        budget: 'Бюджетке ылайыктуу чечимдер',
-        seasonal_offers: 'Жаздык сунуштар жана бонустар',
-        support: 'Бардык этаптар боюнча жардам',
+        header: 'Биздин платформанын өзгөчөлүктөрү:',
+        safe_content: 'Балдар үчүн коопсуз видеоконтент',
+        halal_control: 'Халал стандарттарына ылайык текшерилген',
+        child_friendly: 'Балдарга ылайыктуу интерфейс',
+        educational: 'Илимий жана диний билим берүү материалдары',
+        time_control: 'Көрүү убактысын чектөө функциясы',
+        parent_community: 'Ата-энелер үчүн колдоо жана пикир алышуу',
+        free_access: 'Акысыз жана жеткиликтүү видеолор',
+        multilingual: 'Бир нече тилде видеоконтент',
+        family_friendly: 'Үй-бүлөлүк контент',
+        support_us: 'Бизди колдоо үчүн кайрымдуулук мүмкүнчүлүктөрү',
       }
     : {
-        header: 'Полное сопровождение:',
-        installation: 'Профессиональная установка оборудования',
-        consultation: 'Консультации по выбору отопительной системы',
-        design: 'Проектирование отопительных систем',
-        service: 'Обслуживание и ремонт оборудования',
-        energy_saving: 'Рекомендации по экономии энергоресурсов',
-        security: 'Гарантия безопасности системы отопления',
-        documents: 'Помощь с документами для подключения',
-        budget: 'Подбор оптимальных решений для бюджета',
-        seasonal_offers: 'Сезонные акции и бонусы',
-        support: 'Поддержка на всех этапах установки',
+        header: 'Особенности нашей платформы:',
+        safe_content: 'Безопасный видеоконтент для детей',
+        halal_control: 'Прошедший проверку на халяльность',
+        child_friendly: 'Интерфейс, удобный для детей',
+        educational: 'Образовательные и религиозные материалы',
+        time_control: 'Функция ограничения времени просмотра',
+        parent_community: 'Поддержка и общение для родителей',
+        free_access: 'Бесплатные и доступные видео',
+        multilingual: 'Контент на нескольких языках',
+        family_friendly: 'Семейный контент',
+        support_us: 'Возможность поддержать проект',
       };
 
   return (
-    <>
-      <ContainerLeftBox>
-        <h2>{textContent.header}</h2> {/* Динамический заголовок */}
-        {DataTextIcon.map((item) => (
-          <div key={item.id}>
-            <TextIcon>
-              <Box>
-                <ion-icon name={item.icon}></ion-icon>
-              </Box>
-              <p>{textContent[item.textKey]}</p>
-            </TextIcon>
-            <LinePrice />
-          </div>
-        ))}
-      </ContainerLeftBox>
-    </>
+    <ContainerLeftBox>
+      <h2>{textContent.header}</h2>
+      {DataTextIcon.map((item) => (
+        <div key={item.id}>
+          <TextIcon>
+            <Box>
+              <ion-icon name={item.icon}></ion-icon>
+            </Box>
+            <p>{textContent[item.textKey]}</p>
+          </TextIcon>
+          <LinePrice />
+        </div>
+      ))}
+    </ContainerLeftBox>
   );
 };
 

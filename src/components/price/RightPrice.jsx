@@ -10,109 +10,45 @@ import { useSelector } from 'react-redux';
 
 const translations = {
   ru: {
-    ribbon: 'ВСЕ ВКЛЮЧЕНО',
-    title: 'СТОИМОСТЬ ОТОПЛЕНИЯ',
-    subTitle: 'Без установки, с установкой +100$',
+    ribbon: 'ВСЕ БЕСПЛАТНО',
+    title: 'ПОДПИСКА И ДОСТУП',
+    subTitle: 'Без подписки, без рекламы',
     price: 'от',
-    perSystem: 'за одну систему',
-    button: 'ОФОРМИТЬ ЗАЯВКУ',
-    footer: 'Внимание! Предложение ограничено!',
+    perSystem: 'за весь контент',
+    button: 'ПОДКЛЮЧИТЬСЯ',
+    footer: 'Внимание! Контент доступен бесплатно!',
     data: [
-      {
-        id: 1,
-        icon: 'calendar',
-        text: 'Срок службы системы отопления: 14 лет',
-      },
-      {
-        id: 2,
-        icon: 'hammer',
-        text: 'Установка и настройка системы отопления',
-      },
-      {
-        id: 3,
-        icon: 'thermometer',
-        text: 'Тип системы: водяное/электрическое отопление',
-      },
-      { id: 4, icon: 'cube', text: 'Площадь покрытия: до 200 м²' },
-      {
-        id: 5,
-        icon: 'wallet',
-        text: 'Энергоэффективность: экономия до 30% на счетах',
-      },
-      { id: 6, icon: 'business', text: 'Гарантия на установку: 5 лет' },
-      {
-        id: 7,
-        icon: 'thermometer-outline',
-        text: 'Контроль температуры: автоматический режим',
-      },
-      {
-        id: 8,
-        icon: 'construct',
-        text: 'Бесплатное техобслуживание первые 2 года',
-      },
-      {
-        id: 9,
-        icon: 'shield-checkmark',
-        text: 'Сертифицированная безопасность',
-      },
-      { id: 10, icon: 'people', text: 'Квалифицированные специалисты' },
-      { id: 11, icon: 'ribbon', text: 'Использование премиальных материалов' },
-      {
-        id: 12,
-        icon: 'settings',
-        text: 'Возможность кастомизации системы под ваш дом',
-      },
+      { id: 1, icon: 'play-circle', text: 'Безопасные исламские мультфильмы' },
+      { id: 2, icon: 'shield-checkmark', text: 'Халяль-контроль контента' },
+      { id: 3, icon: 'happy', text: 'Удобный интерфейс для детей' },
+      { id: 4, icon: 'book', text: 'Образовательные видео' },
+      { id: 5, icon: 'time', text: 'Контроль времени просмотра' },
+      { id: 6, icon: 'chatbubbles', text: 'Сообщество для родителей' },
+      { id: 7, icon: 'gift', text: 'Все видео бесплатны' },
+      { id: 8, icon: 'globe', text: 'Контент на разных языках' },
+      { id: 9, icon: 'people', text: 'Семейный формат' },
+      { id: 10, icon: 'heart', text: 'Возможность поддержать проект' },
     ],
   },
   ky: {
-    ribbon: 'БААРЫ КИРЕТ',
-    title: 'ЖЫЛУУЛУКТУН БААСЫ',
-    subTitle: 'Орнотуу жок, орнотуу менен +100$',
+    ribbon: 'БААРЫ АКЫСЫЗ',
+    title: 'ЖАЗЫЛУУ ЖАНА КОЛДОНУУ',
+    subTitle: 'Жазылуу жок, жарнамалар жок',
     price: 'баштап',
-    perSystem: 'бир система үчүн',
-    button: 'КАЙРЫЛУУ БЕРҮҮ',
-    footer: 'Көңүл буруңуз! Сунуш чектелген!',
+    perSystem: 'бардык контент үчүн',
+    button: 'КИРИҮҮ',
+    footer: 'Көңүл буруңуз! Контент акысыз жеткиликтүү!',
     data: [
-      {
-        id: 1,
-        icon: 'calendar',
-        text: 'Жылуулук системасынын кызмат мөөнөтү: 14 жыл',
-      },
-      {
-        id: 2,
-        icon: 'hammer',
-        text: 'Жылуулук системасын орнотуу жана тууралоо',
-      },
-      {
-        id: 3,
-        icon: 'thermometer',
-        text: 'Системанын түрү: суу/электр жылытуу',
-      },
-      { id: 4, icon: 'cube', text: 'Камтуу аянты: 200 м² чейин' },
-      {
-        id: 5,
-        icon: 'wallet',
-        text: 'Энергияны үнөмдөө: эсептерден 30% га чейин',
-      },
-      { id: 6, icon: 'business', text: 'Орнотуу кепилдиги: 5 жыл' },
-      {
-        id: 7,
-        icon: 'thermometer-outline',
-        text: 'Температураны көзөмөлдөө: автоматтык режим',
-      },
-      { id: 8, icon: 'construct', text: 'Биринчи 2 жыл акысыз тейлөө' },
-      {
-        id: 9,
-        icon: 'shield-checkmark',
-        text: 'Сертификацияланган коопсуздук',
-      },
-      { id: 10, icon: 'people', text: 'Квалификациялуу адистер' },
-      {
-        id: 11,
-        icon: 'ribbon',
-        text: 'Жогорку сапаттагы материалдарды колдонуу',
-      },
-      { id: 12, icon: 'settings', text: 'Системаны үйүңүзгө ылайыкташтыруу' },
+      { id: 1, icon: 'play-circle', text: 'Коопсуз исламдык мультфильмдер' },
+      { id: 2, icon: 'shield-checkmark', text: 'Халал-контент текшерилген' },
+      { id: 3, icon: 'happy', text: 'Балдар үчүн ыңгайлуу интерфейс' },
+      { id: 4, icon: 'book', text: 'Билим берүү видеолору' },
+      { id: 5, icon: 'time', text: 'Көрүү убактысын көзөмөлдөө' },
+      { id: 6, icon: 'chatbubbles', text: 'Ата-энелер үчүн коомчулук' },
+      { id: 7, icon: 'gift', text: 'Бардык видеолор акысыз' },
+      { id: 8, icon: 'globe', text: 'Көп тилдүү контент' },
+      { id: 9, icon: 'people', text: 'Үй-бүлөлүк формат' },
+      { id: 10, icon: 'heart', text: 'Долбоорду колдоо мүмкүнчүлүгү' },
     ],
   },
 };
@@ -128,7 +64,7 @@ const RightPrice = () => {
       <h2>{lang.title}</h2>
       <p>{lang.subTitle}</p>
       <h3>
-        <span>{lang.price} </span>300<span className="dollar">$</span>
+        <span>{lang.price} </span>0<span className="dollar">$</span>
       </h3>
       <h4>{lang.perSystem}</h4>
       {lang.data.map((item) => (

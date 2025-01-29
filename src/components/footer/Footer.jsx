@@ -12,12 +12,11 @@ const Footer = () => {
   const scrollToPrice = () => scrollToElement('priceSection');
   const scrollToContacts = () => scrollToElement('scrollToContacts');
 
-
   const footerData = {
     ru: {
-      companyTitle: 'О компании',
+      companyTitle: 'О нашем проекте',
       companyDescription:
-        'Мы предоставляем лучшие решения для отопления, обеспечивая комфорт и тепло в вашем доме.',
+        'Наш проект предлагает детям безопасное и познавательное пространство для изучения исламских ценностей через видео и мультимедийный контент. Мы стремимся обеспечить знания о праведной жизни и ценностях, соответствующих Исламу.',
       usefulLinksTitle: 'Полезные ссылки',
       home: 'Главная',
       aboutUs: 'Цены',
@@ -26,10 +25,10 @@ const Footer = () => {
       copyright: 'Сайт создал Адилет',
     },
     ky: {
-      companyTitle: 'Компания жөнүндө',
+      companyTitle: 'Биздин долбоор тууралуу',
       companyDescription:
-        'Биз үйдө жылуулукту камсыз кылуу үчүн эң жакшы чечимдерди сунуштайбыз, үйүңүздө ыңгайлуу жана жылуу болууга жардам беребиз.',
-      usefulLinksTitle: 'Керектуу ссылкалар',
+        'Биздин долбоор балдарга Исламдын баалуулуктарын видео жана мультимедиа контенти аркылуу үйрөтүү үчүн коопсуз жана билимдүү жайды сунуштайт. Биз адал турмуш жана Исламга ылайык баалуулуктарды үйрөтүүгө умтулабыз.',
+      usefulLinksTitle: 'Керектүү шилтемелер',
       home: 'Башкы бет',
       aboutUs: 'Цены',
       contacts: 'Байланыштар',
@@ -69,15 +68,15 @@ const Footer = () => {
                 <Typography variant="h6" gutterBottom>
                   {lang.usefulLinksTitle}
                 </Typography>
-                <Link style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToHome}>
+                <Link style={{ textDecoration: 'none' }} color="inherit" variant="body2" onClick={scrollToHome}>
                   {lang.home}
                 </Link>
                 <br />
-                <Link  style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToPrice}>
+                <Link style={{ textDecoration: 'none' }} color="inherit" variant="body2" onClick={scrollToPrice}>
                   {lang.aboutUs}
                 </Link>
                 <br />
-                <Link style={{textDecoration: 'none'}}  color="inherit" variant="body2" onClick={scrollToContacts}>
+                <Link style={{ textDecoration: 'none' }} color="inherit" variant="body2" onClick={scrollToContacts}>
                   {lang.contacts}
                 </Link>
               </Grid>
@@ -87,7 +86,7 @@ const Footer = () => {
                   {lang.followUsTitle}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                  <Link  color="inherit">
+                  <Link color="inherit">
                     <YouTube />
                   </Link>
                   <Link onClick={() => handleSocialClick('https://wa.me/996770430476')} color="inherit">
@@ -104,9 +103,9 @@ const Footer = () => {
             </Grid>
 
             <Box mt={4} textAlign="center">
-              <Typography style={{cursor: 'pointer'}} variant="body2" color="white" onClick={() => handleSocialClick('https://t.me/Makka567')}>
+              <Typography style={{ cursor: 'pointer' }} variant="body2" color="white" onClick={() => handleSocialClick('https://t.me/Makka567')}>
                 &copy; {new Date().getFullYear()} {lang.copyright}{' '}
-                <Link  color="inherit">
+                <Link color="inherit">
                   <Telegram sx={{ position: 'relative', top: 7 }} />
                 </Link>
               </Typography>

@@ -3,18 +3,18 @@ import { useSelector } from 'react-redux';
 
 const translations = {
   ru: {
-    subtitle: '«Качество сварки — залог надежности конструкции»',
-    title: '«Доверьте свою безопасность профессионалам сварочного дела»',
+    subtitle: '«Чистый контент — спокойствие для родителей»',
+    title: '«Дарите детям безопасные знания и радость без запретного»',
   },
   ky: {
-    subtitle: '«Сварканын сапаты — конструкциянын ишенимдүүлүгүнүн негизги кепилдиги»',
-    title: '«Коопсуздугуңузду сварка ишинин кесипкөй адистерине ишениңиз»',
+    subtitle: '«Таза контент — ата-энелер үчүн тынчтык»',
+    title: '«Балдарыңызга коопсуз билим жана халал кубаныч тартуулаңыз»',
   },
 };
 
 const LeftContact = () => {
   const { languageStore } = useSelector((state) => state.umra);
-  const lang = languageStore ? translations.ky : translations.ru; // Показывать кыргызский, если languageStore = true, и русский, если false
+  const lang = languageStore ? translations.ky : translations.ru;
 
   return (
     <ContacktsLeftBox>

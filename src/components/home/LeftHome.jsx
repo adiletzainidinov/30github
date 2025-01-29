@@ -11,21 +11,21 @@ const LeftHome = () => {
   // Мультиязычные данные
   const textContent = languageStore
     ? {
-        title: 'Үйүңүз үчүн жылуулук',
-        subtitle: 'Сапаттуу жылытуу жана сварка кызматтары',
+        title: 'Балдарыңыз үчүн адал контент',
+        subtitle: 'Исламга шайкеш видеолор',
         description:
-          'Бизден сиз үйүңүз үчүн сапаттуу жылытуу системасын жана сварка кызматтарын арзан баада алсаңыз болот. Баалар жана кызматтар боюнча маалыматты биздин сайттан тапсаңыз болот.',
-        priceQuality: 'Арзан баа жана жогорку сапат',
-        startButton: 'Кызмат тууралуу',
+          'Биздин платформада сиз балдарыңыз үчүн коопсуз жана адал видеолорду таба аласыз. Бардык контент Исламдын негизги принциптерине шайкеш келет жана пайдалуу билим берет.',
+        priceQuality: 'Коопсуздук жана пайдалуу маалымат',
+        startButton: 'Платформа тууралуу',
         infoButton: 'Толук маалымат алуу',
       }
     : {
-        title: 'Отопление вашего дома',
-        subtitle: 'Качественное отопление и сварочные услуги',
+        title: 'Халяль контент для ваших детей',
+        subtitle: 'Видео в соответствии с Исламом',
         description:
-          'У нас вы можете заказать качественную систему отопления и сварочные работы по доступной цене. Узнайте цены и услуги на нашем сайте.',
-        priceQuality: 'Доступная цена и высокое качество',
-        startButton: 'Узнать об услуге',
+          'На нашей платформе вы найдете безопасные и халяльные видео для детей. Весь контент соответствует основным принципам Ислама и приносит пользу в обучении.',
+        priceQuality: 'Безопасность и полезные знания',
+        startButton: 'Подробнее о платформе',
         infoButton: 'Узнать больше',
       };
 
@@ -37,8 +37,12 @@ const LeftHome = () => {
       <div className="line"></div>
       <p>{textContent.description}</p>
       <div className="buttonPapa">
-        <Button onClick={scrollToPriceSection}>{textContent.startButton}</Button>
-        <StyledButtonInformation onClick={scrollfooterContacts}>{textContent.infoButton}</StyledButtonInformation>
+        <Button onClick={scrollToPriceSection}>
+          {textContent.startButton}
+        </Button>
+        <StyledButtonInformation onClick={scrollfooterContacts}>
+          {textContent.infoButton}
+        </StyledButtonInformation>
       </div>
     </LeftContainer>
   );

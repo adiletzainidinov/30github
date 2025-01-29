@@ -6,13 +6,13 @@ const RightHome = () => {
     <RightContainer>
       <Img3DContainer>
         <Img3DWrapper>
-          <Img3D src={'https://i.pinimg.com/736x/24/03/13/240313d5cb0c1184e77e313ded695a23.jpg'} alt="mekkeImg" /> 
+          <Img3D src={'https://i.pinimg.com/736x/2e/60/ef/2e60efedf913a784a8f731ee2412c15d.jpg'} alt="mekkeImg" /> 
           <FloatingDecor /> 
           <FloatingDecor2 /> 
         </Img3DWrapper>
 
         <Img3DWrapper>
-          <Img3D style={{marginTop: 130}} src={'https://i.pinimg.com/736x/2b/fd/26/2bfd26cca83000695e5b4d40f8fb4183.jpg'} alt="mekkeImgGorod" /> 
+          <Img3D style={{marginTop: 130}} src={'https://i.pinimg.com/736x/58/76/9b/58769b2d037914c8aa974ff9e0eeb5e1.jpg'} alt="mekkeImgGorod" /> 
           <FloatingDecor3 /> 
           <FloatingDecor4 /> 
         </Img3DWrapper>

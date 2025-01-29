@@ -16,36 +16,36 @@ import { useSelector } from 'react-redux';
 const RevievWithVideoDataRu = [
   {
     id: 1,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Гулумкан апа отопление в доме: интересная история',
+    src: 'https://www.youtube.com/embed/abc123xyz',  // Пример ссылок
+    title: 'Учим арабский с малышами: Весёлые уроки для детей',
   },
   {
     id: 2,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Как отопление изменило жизнь Гульнары апа',
+    src: 'https://www.youtube.com/embed/def456ghi',  // Пример ссылок
+    title: 'Детские истории о пророках: Уроки морали и воспитания',
   },
   {
     id: 3,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Духовное и физическое тепло: история установки отопления Айжамал апа',
+    src: 'https://www.youtube.com/embed/jkl789mno',  // Пример ссылок
+    title: 'Маленькие мусульмане: Уроки добра и терпимости для детей',
   },
 ];
 
 const RevievWithVideoDataKy = [
   {
     id: 1,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Гулумкан апа үйдөгү жылуулук: кызыктуу окуя',
+    src: 'https://www.youtube.com/embed/abc123xyz',  // Пример ссылок
+    title: 'Араб тилин балдар менен үйрөнүү: Көңүлдүү сабактар',
   },
   {
     id: 2,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Жылуулук Гульнары апанын жашоосун кантип өзгөрттү',
+    src: 'https://www.youtube.com/embed/def456ghi',  // Пример ссылок
+    title: 'Пайгамбарлар тууралуу балдар үчүн окуялар: Мораль жана тарбия',
   },
   {
     id: 3,
-    src: 'https://www.youtube.com/embed/snxK7d99I2U',  // Преобразованная ссылка
-    title: 'Айжамал апанын жылуулук орнотушу: руханий жана физикалык жылуулук тарыхы',
+    src: 'https://www.youtube.com/embed/jkl789mno',  // Пример ссылок
+    title: 'Кичинекей мусулмандар: Балдар үчүн жакшы жана чыдамкай болуу сабактары',
   },
 ];
 
@@ -61,8 +61,8 @@ const ReveivWidthVideo = () => {
           <TitleRevievVideo>
             <h2>
               {languageStore
-                ? 'Кардарлардын видео пикирлери (Жылуулук орнотуулары)'
-                : 'Видео отзывы наших клиентов о отоплении'}
+                ? 'Балдар үчүн видео сабактар жана окуялар (Исламдык контент)'
+                : 'Видео для детей: Уроки и истории на исламском YouTube'}
             </h2>
           </TitleRevievVideo>
           <CardContainer>
@@ -87,7 +87,7 @@ const ReveivWidthVideo = () => {
             ))}
           </CardContainer>
           <ButtonStyleVideo>
-            {languageStore ? 'Бардык пикирлер' : 'Все отзывы'}
+            {languageStore ? 'Бардык видео сабактар' : 'Все видео уроки'}
           </ButtonStyleVideo>
         </BoxContainer>
       </StyledBox>

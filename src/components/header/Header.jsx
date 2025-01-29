@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '@mui/material';
 import { Container } from './headerStyle';
 import SideBar from './side-bar/SideBar';
-import CottageIcon from '@mui/icons-material/Cottage';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Header = () => {
   return (
@@ -28,13 +28,13 @@ const Header = () => {
             sx={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <CottageIcon sx={{ fontSize: 40, color: '#ffffff', mr: 1 }} />
+              <YouTubeIcon sx={{ fontSize: 40, color: '#ffffff', mr: 1 }} />
               <Typography
                 variant="h6"
                 component="div"
                 sx={{ fontWeight: 'bold', color: '#ffffff' }}
               >
-                Кайрат
+                muslimkids.media
               </Typography>
             </Box>
             <SideBar />
