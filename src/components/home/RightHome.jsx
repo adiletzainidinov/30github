@@ -12,7 +12,7 @@ const RightHome = () => {
         </Img3DWrapper>
 
         <Img3DWrapper>
-          <Img3D style={{marginTop: 130}} src={'https://i.pinimg.com/736x/58/76/9b/58769b2d037914c8aa974ff9e0eeb5e1.jpg'} alt="mekkeImgGorod" /> 
+          <Img3D style={{marginTop: 130}} src={'https://i.pinimg.com/736x/c1/cb/9f/c1cb9fe8e9788a206f8f3886d6d78039.jpg'} alt="mekkeImgGorod" /> 
           <FloatingDecor3 /> 
           <FloatingDecor4 /> 
         </Img3DWrapper>

@@ -4,9 +4,10 @@ import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '@mui/material';
 import { Container } from './headerStyle';
 import SideBar from './side-bar/SideBar';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import MTUBLogo from './../../assets/images/MuslimKidsLogoReal.png'
 
-const Header = () => {
+const 
+Header = () => {
   return (
     <Container>
       <Box
@@ -28,7 +29,7 @@ const Header = () => {
             sx={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <YouTubeIcon sx={{ fontSize: 40, color: '#ffffff', mr: 1 }} />
+<img src={MTUBLogo} alt="MTUBLogo" style={{width: '30px',height: '30px', borderRadius: '50px', marginRight: '10px'}} />
               <Typography
                 variant="h6"
                 component="div"

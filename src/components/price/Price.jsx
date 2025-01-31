@@ -13,29 +13,24 @@ import {
 import RightPrice from './RightPrice';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import MTUBLogo from './../../assets/images/MuslimKidsLogoReal.png'
+import NaykatMedia from './../../assets/images/NayikatMedia.png'
 
-const translations = {
-  ru: [
-    { id: 1, text: 'Партнёр1' },
-    { id: 2, text: 'Партнёр2' },
-    { id: 3, text: 'Партнёр3' },
-    { id: 4, text: 'Партнёр4' },
-    { id: 5, text: 'Партнёр5' },
-  ],
-  ky: [
-    { id: 1, text: 'Өнөктөш1' },
-    { id: 2, text: 'Өнөктөш2' },
-    { id: 3, text: 'Өнөктөш3' },
-    { id: 4, text: 'Өнөктөш4' },
-    { id: 5, text: 'Өнөктөш5' },
-  ],
-};
+const translations = [
+  {
+    id: 1,
+    text: MTUBLogo,
+  },
+  { id: 2, text: NaykatMedia },
+  { id: 3, text: MTUBLogo },
+  { id: 4, text:  NaykatMedia},
+  { id: 5, text: MTUBLogo },
+];
 
 const animation = { duration: 15000, easing: (t) => t };
 
 const Price = () => {
   const { languageStore } = useSelector((state) => state.umra);
-  const lang = languageStore ? translations.ky : translations.ru; // Выбор языка
 
   // Мультиязычный текст
   const textContent = languageStore
@@ -46,9 +41,9 @@ const Price = () => {
         partnersTitle: 'БИЗДИН ӨНӨКТӨШТӨР',
       }
     : {
-        title: 'ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПЛАТФОРМЕ',
+        title: 'НАША БУДУЩАЯ ПЛАТФОРМА',
         description:
-          'Наша цель – предоставить детям халяльный, безопасный и полезный видеоконтент. Если вы хотите поддержать развитие платформы, свяжитесь с нами.',
+          'Наша цель – предоставить детям безопасный и полезный видеоконтент с Исламскими ценностьями.',
         partnersTitle: 'НАШИ ПАРТНЁРЫ',
       };
 
@@ -77,7 +72,7 @@ const Price = () => {
         <BoxContainer>
           <TextContent>
             <h2>{textContent.title}</h2>
-            <p>{textContent.description}</p>
+            <p style={{ textAlign: 'center' }}>{textContent.description}</p>
           </TextContent>
           <ContainerContent>
             <LeftPrice />
@@ -88,9 +83,17 @@ const Price = () => {
         <BlueBox>
           <h2>{textContent.partnersTitle}</h2>
           <PartnerBox ref={sliderRef} className="keen-slider">
-            {lang.map((item) => (
+            {translations.map((item) => (
               <div className="boxCard keen-slider__slide" key={item.id}>
-                {item.text}
+                <img
+                  style={{
+                    width: '120px',
+                    height: '70px',
+                    borderRadius: '10px',
+                  }}
+                  src={item.text}
+                  alt=""
+                />
               </div>
             ))}
           </PartnerBox>

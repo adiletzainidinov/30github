@@ -27,7 +27,7 @@ export const ContacktsLeftBox = styled('div')(() => ({
   backgroundImage:
     'url("https://i.pinimg.com/736x/2c/43/b7/2c43b73c59227cada908b821315e61d6.jpg")',
   backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundPosition: 'center bottom',
   position: 'relative',
   overflow: 'hidden',
   display: 'flex',

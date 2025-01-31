@@ -9,7 +9,7 @@ import { handleSocialClick } from '../../utils/shared/gotuSoccial';
 
 const translations = {
   ru: {
-    buttonText: 'Следите за новыми халяль-видео для детей',
+    buttonText: 'Следите за новыми видео для детей',
   },
   ky: {
     buttonText: 'Балдар үчүн жаңы халал видеолордон кабардар болуңуз',
@@ -20,10 +20,10 @@ const sossialMediaData = [
   {
     id: 1,
     logo: 'logo-instagram',
-    url: 'https://www.instagram.com/yourchannel/', // Обнови на актуальный
+    url: 'https://www.instagram.com/muslimkids.media?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D', // Обнови на актуальный
   },
-  { id: 2, logo: 'logo-whatsapp', url: 'https://wa.me/996770430476' },
-  { id: 3, logo: 'logo-youtube', url: 'https://www.youtube.com/yourchannel/' }, // Обнови ссылку
+  { id: 2, logo: 'logo-youtube', url: 'https://www.youtube.com/@muslimkidskg' },
+  { id: 3, logo: 'logo-tiktok', url: 'https://www.tiktok.com/@muslimkids.media?is_from_webapp=1&sender_device=pc' }, // Обнови ссылку
 ];
 
 const RightContact = () => {
@@ -39,7 +39,7 @@ const RightContact = () => {
           </p>
         ))}
       </SossialMediaBox>
-      <SossialMediaButton onClick={() => handleSocialClick('https://t.me/+996770430476')}>
+      <SossialMediaButton onClick={() => handleSocialClick('https://t.me/muslimkidsmedia')}>
         <p>{lang.buttonText}</p>
         <img
           style={{ width: 25, height: 25, marginLeft: 10 }}

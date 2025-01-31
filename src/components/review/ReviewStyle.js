@@ -50,47 +50,49 @@ export const ReviewsFromЗilgrims = styled('h2')(() => ({
 export const ReviewPapa = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'space-between',
-  gap: 50,
+  gap: 20,
   flexWrap: 'wrap',
-  margin: '0 20px',
+  margin: '20px 0',
   '@media (max-width: 1100px)': {
     justifyContent: 'center',
   },
 }));
 
-export const RevievCard = styled('div')(({ BackgroundColor }) => ({
-  width: '100%',
-  maxWidth: '500px',
+export const RevievCard = styled('div')(() => ({
+  width: '350px',
   height: 'auto',
-  backgroundColor: BackgroundColor,
-  borderRadius: '20px',
-  padding: '30px',
+  backgroundColor: '#ff5a05',
   boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)',
   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  padding: '20px',
+  borderRadius: '10px',
   '&:hover': {
     transform: 'scale(1.05)',
     boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
+  },
+  '@media (max-width: 1100px)': {
+    margin: '0 auto',
+    width: '330px',
   },
 }));
 
 export const AboutNameReviev = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'space-between',
+  flexDirection: 'column',
   alignItems: 'center',
   color: '#131333',
   '& img': {
-    width: '50px',
-    height: '50px',
-    borderRadius: '50%',
+    width: '100%',
+    height: '400px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    borderRadius: '20px',
   },
   '& p': {
     width: '100%',
-    maxWidth: '200px',
-    marginLeft: '10px',
-    marginRight: '10px',
     fontSize: '18px',
     fontWeight: 'bold',
+    color: 'white',
   },
   '& .raiting': {
     backgroundColor: '#fff',

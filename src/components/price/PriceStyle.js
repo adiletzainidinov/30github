@@ -365,7 +365,7 @@ export const PartnerBox = styled('h5')(() => ({
     backgroundColor: 'white',
     boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.15)',
     borderRadius: 7,
-    padding: '35px 80px',
+    padding: '25px 25px',
     maxWidth: '100%',
     width: 'fit-content',
     margin: '0 10px',
