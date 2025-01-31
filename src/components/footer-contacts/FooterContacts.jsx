@@ -18,7 +18,7 @@ const FooterContactsDataRu = [
     id: 1,
     number: 'Наш сайт для поддежки',
     icon: 'link',
-    write: 'перейти на сайт',
+    write: 'перейти',
     url: 'https://details-zeta.vercel.app/',
   },
 ];
@@ -50,7 +50,7 @@ const FooterContacts = () => {
     <Container id="footerContacts">
       <StyledBox>
         <BoxContainer>
-          <h2 style={{fontSize: 45}}>
+          <h2 style={{ fontSize: 45 }}>
             {languageStore ? 'Контакттар' : 'Как вы можете поддержать нас?'}
           </h2>
           <StyledText>
@@ -71,22 +71,6 @@ const FooterContacts = () => {
                     alignItems: 'center',
                   }}
                 >
-                  {/* <p
-                    className="call-out"
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      fontSize: '24px',
-                      position: 'relative',
-                      top: 20
-                    }}
-                  >
-                    <span className="call" style={{ fontSize: 35 }}>
-                      <ion-icon name="information-circle-outline"></ion-icon>
-                    </span>
-                    <span style={{ marginTop: -10 }}>{item.number}</span>
-                  </p> */}
                   <ButtonStyle
                     onClick={() => handleSocialClick(item.url)}
                     style={{}}
