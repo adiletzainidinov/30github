@@ -13,7 +13,7 @@ import {
 } from './ReviewStyle';
 import Button from '@mui/material/Button';
 import { GrNext, GrPrevious } from 'react-icons/gr';
-import { colors, ReviewData } from '../../data/revievData';
+import { ReviewData } from '../../data/revievData';
 import { ReviewText } from './ReviewText';
 
 const Review = () => {
@@ -46,8 +46,8 @@ const Review = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center', 
-          marginBottom: '80px'
+          alignItems: 'center',
+          marginBottom: '80px',
         }}
       >
         <h2
@@ -116,7 +116,7 @@ const Review = () => {
                           alignItems: 'center',
                         }}
                       >
-                        <ReviewText text={review.review} />
+                        <ReviewText text={review.review} id={review.id} />
                       </div>
                     </AboutNameReviev>
                   </RevievCard>
@@ -126,46 +126,52 @@ const Review = () => {
           </ReviewPapa>
 
           <div
-            className="dots"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginTop: '10px',
-            }}
-          >
-            {Array.from({ length: Math.min(ReviewData[lang].length, 6) }).map(
-              (_, idx) => {
-                const colorIndex = Math.floor(currentSlide / 6) % colors.length; // Выбираем цвет из массива
-                const dotColor = colors[colorIndex]; // Цвет группы
+  className="dots"
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '10px',
+    gap: '10px',
+  }}
+>
+  {/* Кнопки с id отзывов */}
+  {ReviewData[lang]
+    .slice(
+      Math.floor(currentSlide / 3) * 3, 
+      Math.floor(currentSlide / 3) * 3 + 3
+    )
+    .map((review, idx) => (
+      <button
+        key={review.id}
+        className={`dot ${currentSlide % 3 === idx ? 'active' : ''}`}
+        onClick={() => instanceRef.current?.moveToIdx(review.id - 1)}
+        style={{
+          width: '30px',
+          height: '30px',
+          borderRadius: '50%',
+          background: currentSlide % 3 === idx ? '#000' : '#c5c5c5',
+          color: currentSlide % 3 === idx ? '#fff' : '#000',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          border: 'none',
+          cursor: 'pointer',
+        }}
+      >
+        {review.id}
+      </button>
+    ))}
 
-                return (
-                  <button
-                    key={idx}
-                    className={`dot ${
-                      currentSlide % Math.min(ReviewData[lang].length, 6) ===
-                      idx
-                        ? 'active'
-                        : ''
-                    }`}
-                    onClick={() => instanceRef.current?.moveToIdx(idx)}
-                    style={{
-                      width: '10px',
-                      height: '10px',
-                      borderRadius: '50%',
-                      background:
-                        currentSlide % Math.min(ReviewData[lang].length, 6) ===
-                        idx
-                          ? dotColor
-                          : '#c5c5c5',
-                      margin: '0 5px',
-                      border: 'none',
-                      cursor: 'pointer',
-                    }}
-                  ></button>
-                );
-              }
-            )}
-          </div>
+  {/* Количество всех отзывов */}
+  <span style={{ fontSize: '16px', fontWeight: 'bold', color: '#666' }}>
+    / {ReviewData[lang].length}
+  </span>
+</div>
+
+
         </BoxContainer>
       </StyledBox>
     </Container>

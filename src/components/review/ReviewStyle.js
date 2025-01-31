@@ -67,7 +67,6 @@ export const RevievCard = styled('div')(() => ({
   padding: '20px',
   borderRadius: '10px',
   '&:hover': {
-    transform: 'scale(1.05)',
     boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
   },
   '@media (max-width: 1100px)': {
