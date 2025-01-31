@@ -73,6 +73,15 @@ export const RevievCard = styled('div')(() => ({
     margin: '0 auto',
     width: '330px',
   },
+  '@media (max-width: 380px)': {
+    width: '300px',
+  },
+  '@media (max-width: 350px)': {
+    width: '270px',
+  },
+  '@media (max-width: 320px)': {
+    width: '250px',
+  },
 }));
 
 export const AboutNameReviev = styled('div')(() => ({
@@ -81,6 +90,7 @@ export const AboutNameReviev = styled('div')(() => ({
   flexDirection: 'column',
   alignItems: 'center',
   color: '#131333',
+ 
   '& img': {
     width: '100%',
     height: '400px',
