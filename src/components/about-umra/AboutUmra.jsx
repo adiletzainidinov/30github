@@ -5,9 +5,12 @@ import {
   StyledBox,
   TextContainer,
 } from './AboutUmraStyle';
+import { scrollToElement } from '../../utils/shared/scrollUtils';
 
 const AboutPlatform = () => {
   const { languageStore } = useSelector((state) => state.umra);
+  const scrollfooterContacts = () => scrollToElement('footerContacts');
+
 
   // Мультиязычные данные
   const textContent = languageStore
@@ -58,7 +61,7 @@ const AboutPlatform = () => {
               ))}
               <p className="system-info">{textContent.systemInfo}</p>
               <p className="quote">{textContent.quote}</p>
-              <p className="approach">{textContent.approach}</p>
+              <p className="approach">{textContent.approach} <br />  <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Перейти</span></p>
             </TextContainer>
           </BoxContainer>
         </StyledBox>

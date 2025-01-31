@@ -1,8 +1,11 @@
 import { useSelector } from 'react-redux';
 import { Container, StyledBox, Overlay, Background, TextContainer } from './VideoUmraStyle';
+import { scrollToElement } from '../../utils/shared/scrollUtils';
 
 const VideoPlatform = () => {
   const { languageStore } = useSelector((state) => state.umra);
+  const scrollfooterContacts = () => scrollToElement('footerContacts');
+
 
   // Мультиязычный текст
   const textContent = languageStore
@@ -26,7 +29,7 @@ const VideoPlatform = () => {
         <Overlay />
         <TextContainer>
           <h1 dangerouslySetInnerHTML={{ __html: textContent.title }} />
-          <p>{textContent.description}</p>
+          <p>{textContent.description}  <br />  <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Перейти</span></p>
           <p className="tirmizi">{textContent.footer}</p>
         </TextContainer>
       </StyledBox>

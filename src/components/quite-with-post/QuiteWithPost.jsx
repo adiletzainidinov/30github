@@ -2,6 +2,7 @@ import { Container, Typography } from '@mui/material';
 import Button from '../../shared/UI/button/Button';
 import { QuoteContainer, StyledBox } from './QuiteWithPostStyle';
 import { useSelector } from 'react-redux';
+import { scrollToElement } from '../../utils/shared/scrollUtils';
 
 const shareToTelegram = (message) => {
   const url = "https://guhkiflower.vercel.app/"; // Укажи реальную ссылку на контент
@@ -11,6 +12,9 @@ const shareToTelegram = (message) => {
 
 const QuiteWithPost = () => {
   const { languageStore } = useSelector((state) => state.umra);
+  const scrollfooterContacts = () => scrollToElement('footerContacts');
+
+
 
   // Сообщения на русском и кыргызском языках, теперь ориентированные на исламский контент для детей
   const messageRu = `Здесь на нашем канале для детей, мы рассказываем истории о пророках, их мудрости и любви к Аллаху. 
@@ -26,7 +30,7 @@ const QuiteWithPost = () => {
     <Container>
       <StyledBox>
         <QuoteContainer>
-          <div className="text">{message}</div>
+          <div className="text">{message}  <br />  <p style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Перейти</p></div>
           <Typography
             variant="subtitle1"
             component="span"

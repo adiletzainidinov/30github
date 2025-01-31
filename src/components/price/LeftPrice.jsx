@@ -17,6 +17,7 @@ const DataTextIcon = [
 
 const LeftPrice = () => {
   const { languageStore } = useSelector((state) => state.umra);
+  const scrollfooterContacts = () => document.getElementById('footerContacts')?.scrollIntoView({ behavior: 'smooth' });
 
   // Мультиязычный контент
   const textContent = languageStore
@@ -44,12 +45,22 @@ const LeftPrice = () => {
         free_access: 'Бесплатные и доступные видео',
         multilingual: 'Контент на нескольких языках',
         family_friendly: 'Семейный контент',
-        support_us: 'Возможность поддержать проект',
+        support_us: (
+          <>
+            Возможность поддержать проект{" "} <br />
+            <span
+              style={{ color: '#007bff', cursor: 'pointer' }}
+              onClick={scrollfooterContacts}
+            >
+              Перейти
+            </span>
+          </>
+        ),
       };
 
   return (
     <ContainerLeftBox>
-      <h2 style={{textAlign: 'center'}}>{textContent.header}</h2>
+      <h2 style={{ textAlign: 'center' }}>{textContent.header}</h2>
       {DataTextIcon.map((item) => (
         <div key={item.id}>
           <TextIcon>
