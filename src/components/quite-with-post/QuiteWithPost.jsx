@@ -4,10 +4,9 @@ import { QuoteContainer, StyledBox } from './QuiteWithPostStyle';
 import { useSelector } from 'react-redux';
 
 const shareToTelegram = (message) => {
-  const telegramUrl = `https://t.me/share/url?url=&text=${encodeURIComponent(
-    message
-  )}`;
-  window.open(telegramUrl, '_blank');
+  const url = "https://guhkiflower.vercel.app/"; // Укажи реальную ссылку на контент
+  const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(message)}`;
+  window.open(telegramUrl, "_blank", "noopener,noreferrer");
 };
 
 const QuiteWithPost = () => {
@@ -15,7 +14,7 @@ const QuiteWithPost = () => {
 
   // Сообщения на русском и кыргызском языках, теперь ориентированные на исламский контент для детей
   const messageRu = `Здесь на нашем канале для детей, мы рассказываем истории о пророках, их мудрости и любви к Аллаху. 
-        Эта история о маленьком Мухаммаде (мир ему) и его уроках терпения и доброты. Мы учим детей следовать примеру пророков и быть хорошими людьми.`;
+        Эта история о Мухаммаде (мир ему) и его уроках терпения и доброты. Мы учим детей следовать примеру пророков и быть хорошими людьми.`;
 
   const messageKy = `Биздин балдар үчүн арналган каналда, биз пайгамбарлардын окуяларын, алардын акылмандыгын жана Аллахка болгон сүйүүсүн айтып беребиз. 
         Бул окуя кичинекей Мухаммад (с.а.в.) жана анын сабырдуулук менен ырайымдуулукка болгон сабактары тууралуу. Биз балдарды пайгамбарлардын үлгүсүнөн үйрөнүүгө жана жакшы адам болууга үндөбүз.`;

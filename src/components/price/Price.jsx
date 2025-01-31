@@ -71,7 +71,7 @@ const Price = () => {
       <StyledBox>
         <BoxContainer>
           <TextContent>
-            <h2>{textContent.title}</h2>
+            <h2 style={{textAlign: 'center'}}>{textContent.title}</h2>
             <p style={{ textAlign: 'center' }}>{textContent.description}</p>
           </TextContent>
           <ContainerContent>

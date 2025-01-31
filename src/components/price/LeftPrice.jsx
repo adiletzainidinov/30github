@@ -49,7 +49,7 @@ const LeftPrice = () => {
 
   return (
     <ContainerLeftBox>
-      <h2>{textContent.header}</h2>
+      <h2 style={{textAlign: 'center'}}>{textContent.header}</h2>
       {DataTextIcon.map((item) => (
         <div key={item.id}>
           <TextIcon>
