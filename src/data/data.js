@@ -81,6 +81,7 @@ export const QuestionsDataRu = [
   },
 ];
 
+
 export const QuestionsDataKy = [
   {
     id: 1,
