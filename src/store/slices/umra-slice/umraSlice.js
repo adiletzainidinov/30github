@@ -12,7 +12,7 @@ const umraSlice = createSlice({
         state.languageStore = true
     },
     languageFalse(state) {
-        state.languageStore = false
+        state.languageStore = true
     }
   },
 });

@@ -92,7 +92,7 @@ const LeftDocuments = () => {
             </div>
             <h2>{item.title}</h2>
             <p>
-              {item.subTitle} <br /> <span style={{ color: '#007bff' }} onClick={scrollfooterContacts}>Перейти</span>
+              {item.subTitle} <br /> <span style={{ color: '#007bff' }} onClick={scrollfooterContacts}>Поддержать</span>
             </p>
           </DocumentsSome>
         ))}

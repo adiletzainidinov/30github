@@ -18,8 +18,8 @@ const VideoPlatform = () => {
     : {
         title: 'Правильные <span className="world">видео</span> — залог светлого будущего ваших детей',
         description:
-          '«Когда ребёнок смотрит правильное видео и безопасный контент, его будущее становится светлым. Наша платформа создана для того, чтобы предоставить детям безопасный и полезный контент в соответствии с исламскими ценностями».',
-        footer: 'Халяльный и безопасный контент для ваших детей',
+          `Лучшее, что может оставить человек после себя — это непрекращающаяся милостыня, полезные знания и праведный ребенок, который молится за него.`,
+        footer: '(Муслим)"Смысл"',
       };
 
   return (
@@ -29,7 +29,7 @@ const VideoPlatform = () => {
         <Overlay />
         <TextContainer>
           <h1 dangerouslySetInnerHTML={{ __html: textContent.title }} />
-          <p>{textContent.description}  <br />  <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Перейти</span></p>
+          <p>{textContent.description}  <br />  <span style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Поддержать</span></p>
           <p className="tirmizi">{textContent.footer}</p>
         </TextContainer>
       </StyledBox>

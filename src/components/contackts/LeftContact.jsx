@@ -27,7 +27,7 @@ const LeftContact = () => {
           style={{ color: '#007bff', cursor: 'pointer', fontSize: '20px' }}
           onClick={scrollfooterContacts}
         >
-          Перейти
+          Поддержать
         </span>
       </h2>
     </ContacktsLeftBox>
