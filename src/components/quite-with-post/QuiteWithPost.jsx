@@ -30,7 +30,7 @@ const QuiteWithPost = () => {
     <Container>
       <StyledBox>
         <QuoteContainer>
-          <div className="text">{message}  <br />  <p style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Перейти</p></div>
+          <div className="text">{message}  <br />  <p style={{ color: '#007bff', cursor: 'pointer' }} onClick={scrollfooterContacts}>Поддержать</p></div>
           <Typography
             variant="subtitle1"
             component="span"

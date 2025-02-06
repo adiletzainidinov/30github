@@ -40,7 +40,7 @@ const Hadis = () => {
         <TextContainer>
           {/* Используем переводы в зависимости от языка */}
           <p className="tirmizi">{lang.servicesTitle}</p>
-          <h1>{lang.servicesDescription} <br />  <span style={{ color: '#007bff', cursor: 'pointer', fontSize: '18px' }} onClick={scrollfooterContacts}>Перейти</span></h1>
+          <h1>{lang.servicesDescription} <br />  <span style={{ color: '#007bff', cursor: 'pointer', fontSize: '18px' }} onClick={scrollfooterContacts}>Поддержать</span></h1>
         </TextContainer>
       </StyledBox>
     </Container>
