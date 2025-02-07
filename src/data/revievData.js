@@ -29,6 +29,7 @@ import HomepageBlogersId28 from './../assets/images/projectMTUB/HomepageBlogersI
 import HomepageNashidId29 from './../assets/images/projectMTUB/HomepageNashidId29.png';
 import HomepageVideoGamesettingId30 from './../assets/images/projectMTUB/HomepageVideoGamesettingId30.png';
 import HomepageVideoGameadditionalmenyId31 from './../assets/images/projectMTUB/HomepageVideoGameadditionalmenyId31.png';
+import ReferenceId32 from './../assets/images/projectMTUB/ReferenceId32.png';
 
 export const ReviewData = {
   ru: [
@@ -307,6 +308,16 @@ export const ReviewData = {
       img: HomepageVideoGameadditionalmenyId31,
       review: `
 Этот макет представляет главную страницу видеоплатформы с открытым дополнительным меню управления видео. В верхней части экрана расположен логотип раздела "Gaming" с красной иконкой, а ниже отображен заголовок "Рекомендовано". В центре экрана представлена миниатюра видеоролика с изображением персонажа, держащего палестинский флаг. Внизу размещено всплывающее меню с пятью опциями: "Не интересует" (скрытие контента), "Смотреть позже" (добавление в список), "Сохранить" (добавление в плейлист), "Поделиться" (отправка видео) и "Пожаловаться" (жалоба на контент).
+`,
+},
+
+
+
+    {
+      id: 32,
+      img: ReferenceId32,
+      review: `
+Этот макет представляет справочный раздел видеоплатформы, оформленный в лаконичном стиле для быстрого поиска информации. В верхней части экрана расположен заголовок 'Справка' и кнопка возврата, а ниже – список популярных справочных ресурсов. Все представленные статьи имеют одинаковое название: 'Как включить звук на YouTube - Справка', что повторяется несколько раз. В центре экрана размещена строка поиска, позволяющая пользователю находить нужную информацию. Интерфейс выполнен в светлых тонах, обеспечивая удобочитаемость и простоту навигации.
 `,
 },
 
