@@ -31,6 +31,7 @@ import HomepageVideoGamesettingId30 from './../assets/images/projectMTUB/Homepag
 import HomepageVideoGameadditionalmenyId31 from './../assets/images/projectMTUB/HomepageVideoGameadditionalmenyId31.png';
 import ReferenceId32 from './../assets/images/projectMTUB/ReferenceId32.png';
 import HomePageadditionalmenuId33 from './../assets/images/projectMTUB/HomePageadditionalmenuId33.png';
+import HomePageadditionalmenucomplainId34 from './../assets/images/projectMTUB/HomePageadditionalmenucomplainId34.png';
 
 export const ReviewData = {
   ru: [
@@ -329,6 +330,16 @@ export const ReviewData = {
       img: HomePageadditionalmenuId33,
       review: `
 Этот макет представляет собой всплывающее меню видеоплатформы, выполненное в минималистичном стиле. В верхней части размещен логотип "MTUB", а ниже – разделы навигации: "Все", "Мультфильмы", "Кино", "Сериалы" и "Аниме". В центре экрана показан кадр из видео с надписью "43 мин" и "21-30 серии". Всплывающее меню содержит шесть пунктов: "Смотреть позже", "Сохранить", "Поделиться", "Не интересует", "Не рекомендовать видео с этого канала" и "Пожаловаться", предоставляя пользователю широкий выбор взаимодействия с контентом.
+`,
+},
+
+
+
+    {
+      id: 34,
+      img: HomePageadditionalmenucomplainId34,
+      review: `
+Этот макет представляет собой всплывающее окно жалобы на видеоплатформе, выполненное в лаконичном стиле. В верхней части расположен логотип "MTUB", а ниже – категории для навигации: "Все", "Мультфильмы", "Кино", "Сериалы" и "Аниме". В центре экрана отображается видеоплеер с кадром из ролика. Всплывающее окно содержит список причин жалобы, включая "Контент сексуального характера" и "Жестокие или отталкивающие сцены/Пропаганда терроризма". Внизу расположены кнопки "Отмена" и "Пожаловаться", позволяя пользователю подтвердить или отменить выбор.
 `,
 },
 
