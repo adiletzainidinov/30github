@@ -30,6 +30,7 @@ import HomepageNashidId29 from './../assets/images/projectMTUB/HomepageNashidId2
 import HomepageVideoGamesettingId30 from './../assets/images/projectMTUB/HomepageVideoGamesettingId30.png';
 import HomepageVideoGameadditionalmenyId31 from './../assets/images/projectMTUB/HomepageVideoGameadditionalmenyId31.png';
 import ReferenceId32 from './../assets/images/projectMTUB/ReferenceId32.png';
+import HomePageadditionalmenuId33 from './../assets/images/projectMTUB/HomePageadditionalmenuId33.png';
 
 export const ReviewData = {
   ru: [
@@ -318,6 +319,16 @@ export const ReviewData = {
       img: ReferenceId32,
       review: `
 Этот макет представляет справочный раздел видеоплатформы, оформленный в лаконичном стиле для быстрого поиска информации. В верхней части экрана расположен заголовок 'Справка' и кнопка возврата, а ниже – список популярных справочных ресурсов. Все представленные статьи имеют одинаковое название: 'Как включить звук на YouTube - Справка', что повторяется несколько раз. В центре экрана размещена строка поиска, позволяющая пользователю находить нужную информацию. Интерфейс выполнен в светлых тонах, обеспечивая удобочитаемость и простоту навигации.
+`,
+},
+
+
+
+    {
+      id: 33,
+      img: HomePageadditionalmenuId33,
+      review: `
+Этот макет представляет собой всплывающее меню видеоплатформы, выполненное в минималистичном стиле. В верхней части размещен логотип "MTUB", а ниже – разделы навигации: "Все", "Мультфильмы", "Кино", "Сериалы" и "Аниме". В центре экрана показан кадр из видео с надписью "43 мин" и "21-30 серии". Всплывающее меню содержит шесть пунктов: "Смотреть позже", "Сохранить", "Поделиться", "Не интересует", "Не рекомендовать видео с этого канала" и "Пожаловаться", предоставляя пользователю широкий выбор взаимодействия с контентом.
 `,
 },
 
