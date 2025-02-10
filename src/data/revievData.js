@@ -32,6 +32,7 @@ import HomepageVideoGameadditionalmenyId31 from './../assets/images/projectMTUB/
 import ReferenceId32 from './../assets/images/projectMTUB/ReferenceId32.png';
 import HomePageadditionalmenuId33 from './../assets/images/projectMTUB/HomePageadditionalmenuId33.png';
 import HomePageadditionalmenucomplainId34 from './../assets/images/projectMTUB/HomePageadditionalmenucomplainId34.png';
+import AboutPageId35 from './../assets/images/projectMTUB/AboutPageId35.png';
 
 export const ReviewData = {
   ru: [
@@ -340,6 +341,16 @@ export const ReviewData = {
       img: HomePageadditionalmenucomplainId34,
       review: `
 Этот макет представляет собой всплывающее окно жалобы на видеоплатформе, выполненное в лаконичном стиле. В верхней части расположен логотип "MTUB", а ниже – категории для навигации: "Все", "Мультфильмы", "Кино", "Сериалы" и "Аниме". В центре экрана отображается видеоплеер с кадром из ролика. Всплывающее окно содержит список причин жалобы, включая "Контент сексуального характера" и "Жестокие или отталкивающие сцены/Пропаганда терроризма". Внизу расположены кнопки "Отмена" и "Пожаловаться", позволяя пользователю подтвердить или отменить выбор.
+`,
+},
+
+
+
+    {
+      id: 35,
+      img: AboutPageId35,
+      review: `
+Этот макет представляет страницу истории просмотров видеоплатформы, оформленную в лаконичном стиле для удобного доступа. В верхней части расположены миниатюры недавно просмотренных видео с кнопкой «Посмотреть все». Ниже находятся категории: «Смотреть позже» с числом отложенных видео, «Сохранённые» для избранных записей и «Понравившиеся» с отметками «нравится». В нижней части размещены разделы «Подписки», «Плейлист», «Время просмотра» и «Справка/отзыв», обеспечивая пользователю быстрый доступ к ключевым функциям платформы.
 `,
 },
 
