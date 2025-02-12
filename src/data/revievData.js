@@ -34,6 +34,7 @@ import HomePageadditionalmenuId33 from './../assets/images/projectMTUB/HomePagea
 import HomePageadditionalmenucomplainId34 from './../assets/images/projectMTUB/HomePageadditionalmenucomplainId34.png';
 import AboutPageId35 from './../assets/images/projectMTUB/AboutPageId35.png';
 import AboutPageSettingId36 from './../assets/images/projectMTUB/AboutPageSettingId36.png';
+import AboutPageSettingContinueId37 from './../assets/images/projectMTUB/AboutPageSettingContinueId37.png';
 
 export const ReviewData = {
   ru: [
@@ -362,6 +363,17 @@ export const ReviewData = {
       img: AboutPageSettingId36,
       review: `
 Этот макет представляет страницу настроек видеоплатформы, оформленную в лаконичном стиле для удобства пользователей. В верхней части расположены настройки аккаунта: 'Общие' (основные параметры), 'Сменить аккаунт' (управление учетными записями), 'Семейный центр' (настройки для семьи) и 'Уведомления' (оповещения). Далее следуют разделы для подписок, истории просмотров и конфиденциальности. Внизу находятся настройки видео и аудио, включая 'Качество видео' (настройка разрешения) и 'Фоновое воспроизведение' (просмотр в фоновом режиме).
+`,
+},
+
+
+
+
+    {
+      id: 37,
+      img: AboutPageSettingContinueId37,
+      review: `
+Этот макет представляет страницу настроек видеоплатформы, оформленную в минималистичном стиле для удобного взаимодействия. В верхней части расположены параметры аккаунта, такие как «Субтитры», «Экономия трафика», «Скачивание» и «Чат». Ниже находятся разделы «Настройки видео и аудио», включая «Справку», «Условия использования MTUB» и «О приложении». В нижней части экрана размещён раздел «Настройки разработчика», позволяющий пользователю получить доступ к дополнительным возможностям платформы.
 `,
 },
 
