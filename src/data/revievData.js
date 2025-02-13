@@ -35,6 +35,7 @@ import HomePageadditionalmenucomplainId34 from './../assets/images/projectMTUB/H
 import AboutPageId35 from './../assets/images/projectMTUB/AboutPageId35.png';
 import AboutPageSettingId36 from './../assets/images/projectMTUB/AboutPageSettingId36.png';
 import AboutPageSettingContinueId37 from './../assets/images/projectMTUB/AboutPageSettingContinueId37.png';
+import AboutPagenotificationId38 from './../assets/images/projectMTUB/AboutPagenotificationId38.png';
 
 export const ReviewData = {
   ru: [
@@ -374,6 +375,17 @@ export const ReviewData = {
       img: AboutPageSettingContinueId37,
       review: `
 Этот макет представляет страницу настроек видеоплатформы, оформленную в минималистичном стиле для удобного взаимодействия. В верхней части расположены параметры аккаунта, такие как «Субтитры», «Экономия трафика», «Скачивание» и «Чат». Ниже находятся разделы «Настройки видео и аудио», включая «Справку», «Условия использования MTUB» и «О приложении». В нижней части экрана размещён раздел «Настройки разработчика», позволяющий пользователю получить доступ к дополнительным возможностям платформы.
+`,
+},
+
+
+
+
+    {
+      id: 38,
+      img: AboutPagenotificationId38,
+      review: `
+Этот макет представляет собой экран уведомлений видеоплатформы, оформленный в лаконичном стиле для удобства восприятия. В верхней части размещены заголовок "Уведомление", кнопка фильтрации "Все" и иконка поиска. Далее идут две категории: "Важное" и "Сегодня", каждая из которых содержит уведомления о выходе новой серии мультфильма "Нус-са и Рара". Уведомления оформлены с миниатюрами, заголовками и временем публикации. Внизу экрана находится навигационная панель с разделами "Главная", "Shorts" и "Вы", позволяя пользователю быстро перемещаться по платформе.
 `,
 },
 
