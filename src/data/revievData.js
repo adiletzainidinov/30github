@@ -40,6 +40,7 @@ import AboutPagehistoryId39 from './../assets/images/projectMTUB/AboutPagehistor
 import AboutPageWatchlaterId40 from './../assets/images/projectMTUB/AboutPageWatchlaterId40.png';
 import AboutPagesavedAlld41 from './../assets/images/projectMTUB/AboutPagesavedAlld41.png';
 import AboutPagesavedvideoId42 from './../assets/images/projectMTUB/AboutPagesavedvideoId42.png';
+import AboutPagesavedShortId43 from './../assets/images/projectMTUB/AboutPagesavedShortId43.png';
 
 export const ReviewData = {
   ru: [
@@ -434,6 +435,17 @@ export const ReviewData = {
       img: AboutPagesavedvideoId42,
       review: `
 Этот макет представляет страницу сохраненных видео видеоплатформы, оформленную в современном стиле. В верхней части отображается красочный баннер с изображением детей, держащих Коран. Ниже указано имя пользователя "Зайнидинова Мадина", количество видео (18) и статус доступа ("Ограниченный доступ"). Основная кнопка "Воспроизвести все" позволяет запускать плейлист. Под списком категорий "Все", "Видео" и "Shorts" размещены миниатюры сохраненных видео с указанием названия, канала и количества просмотров. Внизу находится навигационное меню с вкладками "Главная", "Shorts" и "Вы".
+`,
+},
+
+
+
+
+    {
+      id: 43,
+      img: AboutPagesavedShortId43,
+      review: `
+Этот макет представляет страницу сохраненных видео на видеоплатформе, выполненную в современном стиле. В верхней части размещено изображение с мусульманскими детьми, держащими Коран, а ниже – информация о пользователе, количестве видео и статусе доступа. Основная часть экрана содержит кнопки навигации: "Все", "Видео" и "Shorts". В разделе "Shorts" отображены миниатюры коротких видео, которые пока не загрузились, но содержат заголовки. В нижней части экрана расположены иконки главных разделов платформы: "Главная", "Shorts" и "Вы", обеспечивая удобный доступ к навигации.
 `,
 },
 
