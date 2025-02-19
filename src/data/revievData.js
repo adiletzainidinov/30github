@@ -41,6 +41,7 @@ import AboutPageWatchlaterId40 from './../assets/images/projectMTUB/AboutPageWat
 import AboutPagesavedAlld41 from './../assets/images/projectMTUB/AboutPagesavedAlld41.png';
 import AboutPagesavedvideoId42 from './../assets/images/projectMTUB/AboutPagesavedvideoId42.png';
 import AboutPagesavedShortId43 from './../assets/images/projectMTUB/AboutPagesavedShortId43.png';
+import AboutPageLikedAllId44 from './../assets/images/projectMTUB/AboutPageLikedAllId44.png';
 
 export const ReviewData = {
   ru: [
@@ -454,9 +455,9 @@ export const ReviewData = {
 
     {
       id: 44,
-      img: AboutPagesavedShortId43,
+      img: AboutPageLikedAllId44,
       review: `
-Этот макет представляет страницу сохраненных видео на видеоплатформе, выполненную в современном стиле. В верхней части размещено изображение с мусульманскими детьми, держащими Коран, а ниже – информация о пользователе, количестве видео и статусе доступа. Основная часть экрана содержит кнопки навигации: "Все", "Видео" и "Shorts". В разделе "Shorts" отображены миниатюры коротких видео, которые пока не загрузились, но содержат заголовки. В нижней части экрана расположены иконки главных разделов платформы: "Главная", "Shorts" и "Вы", обеспечивая удобный доступ к навигации.
+Этот макет представляет основную страницу видеоплатформы, выполненную в современном стиле для комфортного просмотра. В верхней части расположена яркая обложка с двумя анимированными персонажами, а ниже – раздел «Понравившиеся» с именем канала «Зайдинова Мадина» (18 видео), кнопкой «Воспроизвести все» и пометкой «Ограниченный доступ». В нижней части экрана показаны списки роликов, такие как «Новая серия! Мультфильм Нус-са и Рапа…» от HudaRus, а также элементы навигации, обеспечивающие удобный доступ к контенту.
 `,
 },
 
