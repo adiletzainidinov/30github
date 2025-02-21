@@ -42,6 +42,7 @@ import AboutPagesavedAlld41 from './../assets/images/projectMTUB/AboutPagesavedA
 import AboutPagesavedvideoId42 from './../assets/images/projectMTUB/AboutPagesavedvideoId42.png';
 import AboutPagesavedShortId43 from './../assets/images/projectMTUB/AboutPagesavedShortId43.png';
 import AboutPageLikedAllId44 from './../assets/images/projectMTUB/AboutPageLikedAllId44.png';
+import AboutPageLikedvideoId45 from './../assets/images/projectMTUB/AboutPageLikedvideoId45.png';
 
 export const ReviewData = {
   ru: [
@@ -458,6 +459,17 @@ export const ReviewData = {
       img: AboutPageLikedAllId44,
       review: `
 Этот макет представляет основную страницу видеоплатформы, выполненную в современном стиле для комфортного просмотра. В верхней части расположена яркая обложка с двумя анимированными персонажами, а ниже – раздел «Понравившиеся» с именем канала «Зайдинова Мадина» (18 видео), кнопкой «Воспроизвести все» и пометкой «Ограниченный доступ». В нижней части экрана показаны списки роликов, такие как «Новая серия! Мультфильм Нус-са и Рапа…» от HudaRus, а также элементы навигации, обеспечивающие удобный доступ к контенту.
+`,
+},
+
+
+
+
+    {
+      id: 45,
+      img: AboutPageLikedvideoId45,
+      review: `
+Этот макет представляет главную страницу видеоплатформы, выполненную в современном стиле для комфортного просмотра. В верхней части размещена яркая обложка с двумя персонажами, а ниже – раздел «Понравившиеся» с именем канала «Зайдинова Мадина» (18 видео) и пометкой «Ограниченный доступ». В нижней области находятся кнопка «Воспроизвести все», список недавних роликов и панель навигации, обеспечивающая доступ к разделам «Главная», «Shorts» и «Вы».
 `,
 },
 
